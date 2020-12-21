@@ -32,6 +32,8 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+    <button @click="testConsole"></button>
   </div>
 </template>
 
@@ -47,7 +49,12 @@ import { Options, Vue } from 'vue-class-component';
 
 export default class HelloWorld extends Vue {
   msg!: string
+
   test!: string
+
+  static testConsole(): void {
+    //
+  }
 }
 </script>
 

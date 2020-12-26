@@ -32,8 +32,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
-
-    <button @click="testConsole"></button>
+    <button @click="testMethod">Test</button>
   </div>
 </template>
 
@@ -45,16 +44,23 @@ import { Options, Vue } from 'vue-class-component';
     msg: String,
     test: String,
   },
+  methods: {
+    testMethod(): void {
+      console.log('test');
+    },
+    returnNum(): number {
+      return 123;
+    },
+  },
+  mounted() {
+    console.log('mounted.....');
+  },
 })
 
 export default class HelloWorld extends Vue {
   msg!: string
 
   test!: string
-
-  static testConsole(): void {
-    //
-  }
 }
 </script>
 

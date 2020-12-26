@@ -1,0 +1,45 @@
+*,html, body {
+  font-family: "montserratextralight", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #000000;
+}
+
+.effect-3d {
+  text-shadow: 0px 0px 0 rgba(6, 150, 105, 0),
+    -1px 1px 0 rgba(255, 255, 255, 0.6),
+    -2px 2px 0 rgba(255, 255, 255, 0.6),
+    -3px 3px 0 rgba(255, 1, 1, 0.6),
+    -4px 4px 0 rgba(255, 1, 1, 0.6),
+    -5px 5px 0 rgba(252, 14, 14, 0.7),
+    -6px 6px 0 rgba(252, 14, 14, 0.7),
+    -7px 7px 0 rgba(252, 32, 32, 0.8),
+    -8px 8px 0 rgba(252, 32, 32, 0.8),
+    -9px 9px 0 rgba(220, 220, 220, 0.8)
+}
+
+.max-4-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden; 
+}

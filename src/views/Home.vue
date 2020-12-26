@@ -1,20 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld
-      msg="Welcome to Your Vue.js + TypeScript App"
-      test="test123"
-    />
+    <!-- <CustomCursor /> -->
+    <BurgerMenu />
+    <MainNavigation />
+    <HeroBanner />
+    <MyTools />
+    <!-- <MyWorks /> -->
+    <AboutMe />
+    <FooterNavigation />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import CustomCursor from '@element/CustomCursor.vue';
+import BurgerMenu from '@element/BurgerMenu.vue';
+import MainNavigation from '@layout/MainNavigation.vue'; // @ is an alias to /src
+import HeroBanner from '@layout/HeroBanner.vue';
+import AboutMe from '@layout/AboutMe.vue';
+import MyWorks from '@layout/MyWorks.vue';
+import MyTools from '@layout/MyTools.vue';
+import FooterNavigation from '@layout/FooterNavigation.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    CustomCursor,
+    BurgerMenu,
+    MainNavigation,
+    HeroBanner,
+    AboutMe,
+    MyWorks,
+    MyTools,
+    FooterNavigation,
   },
 })
 export default class Home extends Vue {}

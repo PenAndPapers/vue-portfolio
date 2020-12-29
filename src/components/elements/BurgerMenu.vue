@@ -1,15 +1,17 @@
 <template>
-  <a class="burger-menu fixed top-12 right-12 z-40">
+  <a
+    class="burger-menu fixed top-8 right-8 z-50"
+    @click.stop.prevent="showNavigation">
     <span
-      class=" w-12 block mb-2 border-b"
+      class="w-16 block mb-3 border-b transition-all duration-500"
       :class="borderColor"
     />
     <span
-      class=" w-12 block mb-2 border-b"
+      class="w-16 block mb-3 border-b transition-all duration-500"
       :class="borderColor"
     />
     <span
-      class=" w-12 block mb-2 border-b"
+      class="w-16 block border-b transition-all duration-500"
       :class="borderColor"
     />
   </a>
@@ -17,18 +19,25 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+import { getModule } from 'vuex-module-decorators';
+import MainNavigationModule from '@/store/MainNavigationModule';
+
+const NavigationModule = getModule(MainNavigationModule);
 
 @Options({
-  props: {
-  },
   data() {
     return {
       heroBanner: 0,
       footer: 0,
       borderColor: 'border-white',
+      navState: false,
     };
   },
   methods: {
+    showNavigation() {
+      this.navState = !this.navState;
+      NavigationModule.updateNavigationState(this.navState);
+    },
     updateBurgerMenuColor() {
       if ((window.scrollY + 250) >= this.heroBanner.offsetHeight) {
         this.borderColor = 'border-black';
@@ -57,4 +66,18 @@ export default class BurgerMenu extends Vue {}
 </script>
 
 <style scoped lang="scss">
+a.burger-menu {
+  &.active,
+  &:hover {
+    span {
+      &:first-child {
+        width: 3rem;
+      }
+      &:nth-child(2) {
+        width: 2rem;
+      }
+    }
+  }
+
+}
 </style>

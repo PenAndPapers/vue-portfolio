@@ -1,6 +1,11 @@
 <template>
-  <section id="tools" class="w-full lg:w-10/12 m-auto mt-24 bg-white z-10">
-    <div class="mb-32 transform -rotate-6">
+  <section
+    id="tools"
+    class="w-full lg:w-10/12 m-auto mt-24 bg-white z-10">
+    <div
+      id="tools-i-use"
+      class="mb-32 transform -rotate-6 animate__animated opacity-0"
+      v-in-view-port>
       <h2 class="mb-14 pb-3 text-center text-5xl text-gray-900 font-black font-plaster border-b-2 border-gray-200">Development tools I use</h2>
       <div class="mx-24 text-center">
         <SkillCard
@@ -11,7 +16,7 @@
         />
       </div>
     </div>
-    <div class="mb-32 transform -rotate-6">
+    <div id="frameworks-and-cms" class="mb-32 transform -rotate-6 animate__animated opacity-0">
       <h2 class="mb-14 pb-3 text-center text-5xl text-gray-900 font-black font-plaster border-b-2 border-gray-200">Frameworks and CMS</h2>
       <div class="mx-24 text-center">
         <SkillCard
@@ -22,7 +27,7 @@
         />
       </div>
     </div>
-    <div class="mb-32 transform -rotate-6">
+    <div id="tools-im-learning" class="mb-32 transform -rotate-6 animate__animated opacity-0">
       <h2 class="mb-14 pb-3 text-center text-5xl text-gray-900 font-black font-plaster border-b-2 border-gray-200">Tools I'm currently learning</h2>
       <div class="mx-24 text-center">
         <SkillCard
@@ -41,12 +46,44 @@ import { Options, Vue } from 'vue-class-component';
 import SkillCard from '@common/SkillCard.vue';
 
 @Options({
-  props: {
-  },
   components: {
     SkillCard,
   },
   methods: {
+    isInView() {
+      const screenHeight = window.innerHeight;
+      const toolsIUse = document.getElementById('tools-i-use');
+      const frameWorksAndCms = document.getElementById('frameworks-and-cms');
+      const toolsImLearning = document.getElementById('tools-im-learning');
+      const offSet = 350;
+
+      window.addEventListener('scroll', () => {
+        const toolsIUseScrollY = toolsIUse?.getBoundingClientRect()?.top || 0;
+        const frameWorksAndCmsScrollY = frameWorksAndCms?.getBoundingClientRect()?.top || 0;
+        const toolsImLearningScrollY = toolsImLearning?.getBoundingClientRect()?.top || 0;
+
+        if (toolsIUse) {
+          if ((screenHeight - offSet) >= toolsIUseScrollY) {
+            toolsIUse.classList.add('animate__fadeIn');
+          }
+        }
+
+        if (frameWorksAndCms) {
+          if ((screenHeight - offSet) >= frameWorksAndCmsScrollY) {
+            frameWorksAndCms.classList.add('animate__fadeIn');
+          }
+        }
+
+        if (toolsImLearning) {
+          if ((screenHeight - offSet) >= toolsImLearningScrollY) {
+            toolsImLearning.classList.add('animate__fadeIn');
+          }
+        }
+      });
+    },
+  },
+  mounted() {
+    this.isInView();
   },
 })
 

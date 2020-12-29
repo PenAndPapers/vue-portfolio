@@ -27,4 +27,7 @@ module.exports = {
       backgroundColor: '#40b882',
     },
   },
+  transpileDependencies: [
+    'vuex-module-decorators'
+  ],
 };

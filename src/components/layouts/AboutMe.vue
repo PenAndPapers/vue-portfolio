@@ -2,7 +2,7 @@
   <section id="about" class="w-full lg:w-10/12 m-auto transform -rotate-6">
     <h2 class="mb-14 pb-3 text-center text-5xl text-gray-900 font-black font-plaster border-b-2 border-gray-200">About me</h2>
     <div class="my-32">
-      <p class="text-2xl text-center font-extralight">
+      <p class="text-2xl text-center font-montserrat-300">
         In tellus integer feugiat scelerisque varius morbi enim nunc. Penatibus et magnis dis parturient montes. Dis parturient montes nascetur ridiculus
         mus mauris. Eget nulla facilisi etiam dignissim diam quis enim. Amet nulla facilisi morbi tempus iaculis urna id. Cras sed felis eget velit
         aliquet sagittis id. Tortor dignissim convallis aenean et tortor at. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.
@@ -18,10 +18,6 @@
 import { Options, Vue } from 'vue-class-component';
 
 @Options({
-  props: {
-  },
-  methods: {
-  },
 })
 
 export default class AboutMe extends Vue {}

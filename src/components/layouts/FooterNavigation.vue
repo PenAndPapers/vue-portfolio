@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="relative w-full h-screen flex items-center justify-center overflow-y-hidden">
-    <div class="relative z-40 px-4">
+    <div class="relative z-30 px-4">
       <nav class="flex justify-center items-center mt-12 mb-8 text-center">
         <a
           href="https://www.facebook.com/stvnski"
@@ -31,8 +31,8 @@
           <i class="fas fa-envelope text-red-600 text-4xl"></i>
         </a>
       </nav>
-      <p class="text-center text-white text-sm">
-        Made with <span class="text-white">Vue JS</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="text-white">Tailwind CSS</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="text-white">TypeScript</span>
+      <p class="text-center text-white text-sm font-montserrat-200">
+        Made with Vue JS&nbsp;&nbsp;|&nbsp;&nbsp;TypeScript&nbsp;&nbsp;|&nbsp;&nbsp;Tailwind CSS
       </p>
     </div>
     <Particles class="overflow-y-hidden bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900" />

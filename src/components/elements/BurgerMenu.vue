@@ -1,6 +1,6 @@
 <template>
   <a
-    class="burger-menu fixed top-8 right-8 z-50"
+    class="burger-menu fixed top-8 right-8 z-50 cursor-pointer"
     @click.stop.prevent="showNavigation">
     <span
       class="w-16 block mb-3 border-b transition-all duration-500"

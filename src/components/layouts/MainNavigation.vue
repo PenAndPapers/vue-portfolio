@@ -13,16 +13,14 @@
       class="menu-item flex items-center justify-center -mt-px bg-gray-900 hover:bg-red-600">
       <span class="absolute right-20 lowercase text-right text-6xl text-white font-plaster transition-all">Projects</span>
     </router-link>
-    <router-link
-      to="/"
-      class="menu-item flex items-center justify-center -mt-px bg-gray-900 hover:bg-red-600">
+    <a
+      class="menu-item flex items-center justify-center -mt-px bg-gray-900 hover:bg-red-600 cursor-pointer">
       <span class="absolute right-20 lowercase text-right text-6xl text-white font-plaster transition-all">Development Tools</span>
-    </router-link>
-    <router-link
-      to="/"
-      class="menu-item flex items-center justify-center -mt-px bg-gray-900 hover:bg-red-600">
-      <span class="absolute right-20 lowercase text-right text-6xl text-white font-plaster transition-all">About {{navState}}</span>
-    </router-link>
+    </a>
+    <a
+      class="menu-item flex items-center justify-center -mt-px bg-gray-900 hover:bg-red-600 cursor-pointer">
+      <span class="absolute right-20 lowercase text-right text-6xl text-white font-plaster transition-all">About</span>
+    </a>
   </nav>
 </template>
 <script lang="ts">

@@ -46,14 +46,11 @@ import { Options, Vue } from 'vue-class-component';
   },
   methods: {
     testMethod(): void {
-      console.log('test');
     },
     returnNum(): number {
-      return 123;
     },
   },
   mounted() {
-    console.log('mounted.....');
   },
 })
 

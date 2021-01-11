@@ -22,6 +22,5 @@ export default class MainNavigationModule extends VuexModule {
   @Mutation
   SET_NAVIGATION_STATE(navState: boolean): void {
     this.isOpen = navState;
-    console.log(this.isOpen);
   }
 }
